@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.dash{
+  border: 0 none;
+  border-top: 2px dashed #322f32;
+  background: none;
+  height:0;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent1 {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+* {box-sizing: border-box}
+/* Set height of body and the document to 100% */
+body, html {
+  height: 1000px;
+  margin: 0;
+  font-family: Arial;
+}
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 20%;
+}
+.tablink:hover {
+  background-color: #777;
+}
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+#Home {background-color: red;}
+#News {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
+#Ayan {background-color: #f78af1;}
+</style>
+</head>
+<body scroll="no">
+
+<button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('Ayan', this, 'orange')">Ayan</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Bryan</button>
+<button class="tablink" onclick="openPage('News', this, 'green')">Lake</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">Vishnu</button>
+
+
+<div id="Home" class="tabcontent">
+  <h2>Welcome to Our Group's Website</h2>
+  <p>Home is where the heart is..</p>
+</div>
+
+<div id="News" class="tabcontent">
+  <h2>AP Computer Science </h2>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Explore')">Explore</button>
+  <button class="tablinks" onclick="openCity(event, 'Create')">Create</button>
+</div>
+
+<div id="Explore" class="tabcontent1">
+  <h3>Delivery Drones</h3>
+  <p>Paris is the capital of France.</p>
+</div>
+
+<div id="Create" class="tabcontent1">
+  <h3>Word Stacks</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h2>AP Computer Science </h2>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity1(event, 'Explore1')">Explore</button>
+  <button class="tablinks" onclick="openCity1(event, 'Create1')">Create</button>
+</div>
+
+<div id="Explore1" class="tabcontent1">
+  <h3>Delivery Drones</h3>
+  <p>Paris is the capital of France.</p>
+</div>
+
+<div id="Create1" class="tabcontent1">
+  <h3>Word Stacks</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+</div>
+
+<div id="About" class="tabcontent">
+  <h2>Vishnu's CS Work</h2>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity2(event, 'Explore2')">Explore</button>
+  <button class="tablinks" onclick="openCity2(event, 'Create2')">Create</button>
+</div>
+
+<div id="Explore2" class="tabcontent1">
+  <center><iframe src="https://docs.google.com/document/d/13GjAm43vboFXWfsXhmKpOVGsMQA5bkivv6Up08BDHvk/edit?usp=sharing" style="width:718px; height:700px;" frameborder="0"></iframe></center>
+</div>
+
+<div id="Create2" class="tabcontent1">
+  <center><iframe src="https://docs.google.com/document/d/10cjDu025INOTL_mOfHEaMgaFBJfwlrAqNQXxqzSPw2c/edit?usp=sharing" style="width:718px; height:700px;" frameborder="0"></iframe></center>
+</div>
+</div>
+
+<div id="Ayan" class="tabcontent">
+  <h2>Vishnu's CS Work</h2>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity4(event, 'Explore3')">Explore</button>
+  <button class="tablinks" onclick="openCity4(event, 'Create3')">Create</button>
+</div>
+
+<div id="Explore3" class="tabcontent1">
+  <center><iframe src="https://docs.google.com/document/d/13GjAm43vboFXWfsXhmKpOVGsMQA5bkivv6Up08BDHvk/edit?usp=sharing" style="width:718px; height:700px;" frameborder="0"></iframe></center>
+</div>
+
+<div id="Create3" class="tabcontent1">
+  <center><iframe src="https://docs.google.com/document/d/10cjDu025INOTL_mOfHEaMgaFBJfwlrAqNQXxqzSPw2c/edit?usp=sharing" style="width:718px; height:700px;" frameborder="0"></iframe></center>
+</div>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent1, tablinks;
+  tabcontent1 = document.getElementsByClassName("tabcontent1");
+  for (i = 0; i < tabcontent1.length; i++) {
+    tabcontent1[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+<script>
+function openCity1(evt, cityName) {
+  var i, tabcontent1, tablinks;
+  tabcontent1 = document.getElementsByClassName("tabcontent1");
+  for (i = 0; i < tabcontent1.length; i++) {
+    tabcontent1[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+<script>
+function openCity2(evt, cityName) {
+  var i, tabcontent1, tablinks;
+  tabcontent1 = document.getElementsByClassName("tabcontent1");
+  for (i = 0; i < tabcontent1.length; i++) {
+    tabcontent1[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+<script>
+function openCity4(evt, cityName) {
+  var i, tabcontent1, tablinks;
+  tabcontent1 = document.getElementsByClassName("tabcontent1");
+  for (i = 0; i < tabcontent1.length; i++) {
+    tabcontent1[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+</body>
+</html>
