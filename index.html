@@ -11,6 +11,13 @@
   background-color: #f1f1f1;
 }
 
+.dash{
+  border: 0 none;
+  border-top: 2px dashed #322f32;
+  background: none;
+  height:0;
+}
+
 /* Style the buttons inside the tab */
 .tab button {
   background-color: inherit;
@@ -78,18 +85,17 @@ body, html {
 </head>
 <body>
 
-<button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Home</button>
-<button class="tablink" onclick="openPage('Ayan', this, 'green')">Ayan</button>
-<button class="tablink" onclick="openPage('Lake', this, 'blue')">Lake</button>
-<button class="tablink" onclick="openPage('Vishnu', this, 'orange')">Vishnu</button>
-<button class="tablink" onclick="openPage('Bryan', this, 'orange')">Bryan</button>
+<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">Lake</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Bryan</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">Vishnu</button>
 
 <div id="Home" class="tabcontent">
   <h3>Home</h3>
   <p>Home is where the heart is..</p>
 </div>
 
-<div id="Ayan" class="tabcontent">
+<div id="News" class="tabcontent">
   <h2>AP Computer Science </h2>
 
 <div class="tab">
@@ -108,7 +114,7 @@ body, html {
 </div>
 </div>
 
-<div id="Lake" class="tabcontent">
+<div id="Contact" class="tabcontent">
   <h2>AP Computer Science </h2>
 
 <div class="tab">
@@ -127,8 +133,8 @@ body, html {
 </div>
 </div>
 
-<div id="Vishnu" class="tabcontent">
-  <h2>AP Computer Science </h2>
+<div id="About" class="tabcontent">
+  <h2>Vishnu's CS Work</h2>
 
 <div class="tab">
   <button class="tablinks" onclick="openCity2(event, 'Explore2')">Explore</button>
@@ -137,29 +143,22 @@ body, html {
 
 <div id="Explore2" class="tabcontent1">
   <h3>Delivery Drones</h3>
-  <p>Paris is the capital of France.</p>
+  <p>The computing innovation I chose is delivery drones. The intended purpose of delivery drones is to carry packages and deliver them to customers in an efficient and safe manner. The packages they deliver range from medical products to pizza. These drones are also used in large warehouses, where they carry items from one building to another. My artifact shows the process involved in drone delivery. It highlights the four main steps that are involved in every delivery. Next to each step, there are visuals which demonstrate each step in action.
+</p>
+<hr class="dash" />
+<p>I used Google Slides to create my artifact. The reason I went with Google Slides is that I can seamlessly add text and images together. I first started thinking about the most basic steps involved in drone delivery. Once I decided upon those steps I added them to the Google Slide. I numbered each step and placed the steps in the middle so that the reader could easily understand how drone delivery worked. Then I found images online that highlighted each step in action. This is a new artifact as I wrote the text and found images myself.
+</p>
+<hr class="dash" />
+<p>Drone delivery has the possibility to make the world a better place, but the technology still has to progress. One interesting application of drone delivery is in the field of medicine. In remote locations, there are very few medical resources. If people are suffering and they need resources that are unavailable, many calls have to be made to hospitals in urban cities. If one of these hospitals has the resource then someone needs to go to the hospital, pick up the resource and then deliver it to the patient. This process is long and complicated and usually, by the time the medicine is received, the patient has deceased.
+<br><br>
+This is where delivery drones come in. These drones have special contraptions. “Inside are two units of human blood, which will be used for transfusions during surgeries, complicated childbirths, or to treat young victims of malaria.” With these drones, “3-4 hour trips to the hospital” can become “15-minute trips” (). Now sick people in rural parts of the world can be treated and cared for in with the same effect as those in cities.
+<br>
+<br>
+The negative part of drone delivery regards safety. With the use of drones, can fly and look over private property without being detected. Also, because delivery drones are driven by a computer and not a human being, there is a greater chance for technology failure. This could cause the drone interfering with other flying vehicles(airplanes) or just falling from the sky and injuring people.
+</p>
 </div>
 
 <div id="Create2" class="tabcontent1">
-  <h3>Word Stacks</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
-</div>
-
-<div id="Bryan" class="tabcontent">
-  <h2>AP Computer Science </h2>
-
-<div class="tab">
-  <button class="tablinks" onclick="openCity2(event, 'Explore2')">Explore</button>
-  <button class="tablinks" onclick="openCity2(event, 'Create2')">Create</button>
-</div>
-
-<div id="Explore3" class="tabcontent1">
-  <h3>Delivery Drones</h3>
-  <p>Paris is the capital of France.</p>
-</div>
-
-<div id="Create3" class="tabcontent1">
   <h3>Word Stacks</h3>
   <p>Tokyo is the capital of Japan.</p>
 </div>
